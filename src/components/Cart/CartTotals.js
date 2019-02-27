@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import PayPalButton from 'react-paypal-express-checkout'
+import PayPalButton from './PayPalButton'
 
 export default function CartTotals({value,history}) {
   
@@ -32,10 +32,12 @@ export default function CartTotals({value,history}) {
                    <strong>ksh {cartTotal}</strong>
               </h5>
  
-            <PayPalButton total ={cartTotal} clearCart={clearCart} 
-            history = {history}>
+            <PayPalButton 
+            total ={cartTotal}
+             clearCart={clearCart} 
+            history = {history}/>
 
-            </PayPalButton>
+          
             </div>
         
         </div>

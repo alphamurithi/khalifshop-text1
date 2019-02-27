@@ -10,9 +10,8 @@ export default class Navbar extends Component {
     return (
       <NavWrapper className= "navbar   ">
      <Link to="/">
-     <img src = {logo} alt ="logo" className="navbar-brand" />
+     <img src = {logo} alt ="logo" className="navbar-brand img-fluid" />
      </Link>
-     <input type="text" id="search" placeholder="auto seach for item.."/>
 
      
      <ul className="nav navbar-nav navbar-right align-item-center  ">
@@ -28,10 +27,11 @@ export default class Navbar extends Component {
      <ul className="nav navbar-nav navbar-right align-item-center  ">
 
      <li className="nav-item ">
-          <Link to="/" className="nav-link">
-            checkout
+          <Link to="/about page" className="nav-link">
+            about us 
           </Link>
           </li>  </ul>
+          
      <Link to ='/cart'  >
      
      <ButtonContainer>

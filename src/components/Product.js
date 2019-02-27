@@ -7,11 +7,11 @@ export default class Product extends Component {
   render() {
     const{id,title,img,price,incart} =  this.props.product;
     return (
-      <Wrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
-              <div className="card">
+      <Wrapper className="col-9 mx-auto col-md-6 col-lg-3">
+              <div className="card ">
 
                <ProductConsumer>
-               {(value)=>(<div className="img-container p-5"
+               {(value)=>(<div className="img-container p-3"
                 onClick={()=>
                 value.handleDetail(id)
                 
@@ -76,6 +76,7 @@ product: PropTypes.shape({
 } 
 const Wrapper = styled.div `
 .card{
+  padding:0;
    border-color:transparent;
    transition:all 1s linear;
 }

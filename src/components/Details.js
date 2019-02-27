@@ -11,11 +11,11 @@ export default class Details extends Component {
        {(value)=>{
        const {id,manufacturer,img,description,price,title,incart} =value.detailProduct;
        return(
-       <div className ="container">
+       <div className ="container-fluid mb-10">
           <div className="row">
-            <div className="col-10 mx-auto
-              text-center text-slanted  text-blue">
-                  <h1>{title}</h1>
+            <div className="col-12 
+              text-left py-4 text-slanted text-white bg-inverse ">
+                  <h1 >{title}</h1>
                         </div>
                           </div>
               <div className ="row">

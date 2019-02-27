@@ -10,7 +10,7 @@ const ProductContext = React.createContext();
       products: [], 
       detailProduct: detailProduct,
       cart:[],
-      searchTerm: '',
+      searchTerm: "",
        modalOpen:false,
        modalProduct: detailProduct,
        cartSubTotal:0, 
@@ -154,6 +154,16 @@ const ProductContext = React.createContext();
               }
             })
       }
+      onSearchChange= event =>{
+        this.setState({searchTerm: event.target.value})
+        
+
+      }
+      isSearched=searchTerm=>{
+        return item=>{
+          return !searchTerm || item.title.toLowerCase().includes(searchTerm.toLowerCase())
+        }
+      }
   render() {
     return (
       <ProductContext.Provider  value={{
@@ -166,6 +176,8 @@ const ProductContext = React.createContext();
           decrement: this.decrement,
           removeItem:this.removeItem,
           clearCart: this.clearCart,
+          isSearched:this.isSearched
+
        }}>
        
           {this.props.children}
